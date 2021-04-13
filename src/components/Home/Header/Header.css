@@ -1,0 +1,24 @@
+/* .header-container{
+    height: 100%;
+    background: linear-gradient(90deg, #ffffff 75%, #3a4256 25%);
+    background-image: url('../../../images/chairBg.png');
+} */
+
+.header-container {
+    height:1000px;
+    position:relative;
+    background-image: url('../../../images/chairBg.png');
+    background-size: auto;
+}
+.header-container::after {
+    height:1000px;
+    content:' ';
+    position: absolute;
+    top: 0;
+    width: 25%;
+    right: 0;
+    background-color: #3a4256;
+    z-index: -50;
+    
+}
+

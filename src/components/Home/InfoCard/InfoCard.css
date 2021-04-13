@@ -1,0 +1,11 @@
+.info-container{
+    height: 100px;
+    border-radius: 5px;
+}
+.info-icon{
+    font-size: 3em;
+}
+.info-card{
+    padding: 0px 5px;
+    margin: 5px 0px;
+}

@@ -1,25 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import doctorImage from '../../../images/doctor-sm.png';
 import DoctorsCard from '../DoctorsCard/DoctorsCard';
-const doctorData=[
-    {
-    doctorImg: doctorImage,
-    doctorName: "Dr. Coudi",
-    doctorPhone: "+880-01866-810020"
-    },
-    {
-        doctorImg: doctorImage,
-        doctorName: "Dr. Coudi",
-        doctorPhone: "+880-01866-810020"
-    },
-    {
-        doctorImg: doctorImage,
-        doctorName: "Dr. Coudi",
-        doctorPhone: "+880-01866-810020"
-    }
-]
+// const doctorData=[
+//     {
+//     doctorImg: doctorImage,
+//     doctorName: "Dr. Coudi",
+//     doctorPhone: "+880-01866-810020"
+//     },
+//     {
+//         doctorImg: doctorImage,
+//         doctorName: "Dr. Coudi",
+//         doctorPhone: "+880-01866-810020"
+//     },
+//     {
+//         doctorImg: doctorImage,
+//         doctorName: "Dr. Coudi",
+//         doctorPhone: "+880-01866-810020"
+//     }
+// ]
 
 const Doctors = () => {
+    const [doctorData,setDoctorData]=useState([]);
+    useEffect(()=>{
+        fetch('http://localhost:5000/getAllDoctors')
+        .then(res=> res.json())
+        .then(data=>setDoctorData(data))
+    },[])
     return (
         <section>
             <div className="container">

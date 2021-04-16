@@ -1,8 +1,8 @@
 import React from 'react';
-import FooterCol from '../FooterCol/FooterCol';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
+import FooterCol from '../FooterCol/FooterCol';
 const noNamed = [
     {name: "Emergency Dental Care" , link: "/emergency"},
     {name: "Check Up" , link: "/checkup"},
